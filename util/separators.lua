@@ -99,4 +99,8 @@ end
 
 -- ]]
 
+function separators.line()
+    return wibox.widget.textbox(" | ")
+end
+
 return separators

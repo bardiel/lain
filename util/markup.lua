@@ -21,6 +21,7 @@ local bg = {}
 
 -- Convenience tags.
 function markup.bold(text)      return '<b>'     .. tostring(text) .. '</b>'     end
+function markup.light(text)     return "<span weight='light'>" .. tostring(text) .. "</span>" end
 function markup.italic(text)    return '<i>'     .. tostring(text) .. '</i>'     end
 function markup.strike(text)    return '<s>'     .. tostring(text) .. '</s>'     end
 function markup.underline(text) return '<u>'     .. tostring(text) .. '</u>'     end
