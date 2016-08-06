@@ -148,4 +148,24 @@ function helpers.spairs(t)
 end
 --}}}
 
+--{{{ Iterate over indexted table in reverse order
+function helpers.ripairs(t)
+    local max = 1
+    while t[max] ~= nil do
+        max = max + 1
+    end
+    
+    local function ripairs_it(t, i)
+        i = i-1
+        local v = t[i]
+        if v ~= nil then
+            return i,v
+        else
+            return nil
+        end
+    end
+    return ripairs_it, t, max
+end
+--}}}
+
 return helpers
